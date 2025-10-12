@@ -17,8 +17,9 @@ sidebar:
   phone: +30 694 577 7958
   timezone: Europe/Athens # Enter your timezone, e.g., America/Havana, Africa/Casablanca, America/North_Dakota/Center
   citizenship: Greek
-  website: https://stefanidismarios.github.io # Include the full website URL, including "http://" or "https://".
-  linkedin: Marios Stefanidis
+  website: # Include the full website URL, including "http://" or "https://".
+  linkedinLinkName: marios-stefanidis-522444249
+  linkedinShowcaseName: Marios Stefanidis
   xing:
   github: mstephanidhs
   telegram: # add your nickname without '@' sign
@@ -110,15 +111,15 @@ certifications:
       start: 2025
       # end:
       organization: Coursera
-      credentialid: 29b7348c-c47f-4c3a-b95d-99fd584a4d20
+      credentialid:
       credentialurl: https://www.credly.com/badges/29b7348c-c47f-4c3a-b95d-99fd584a4d20/linked_in_profile
       credentialname: Meta
       # details:
-    - name: 'Web Design for Everybody: Basics of Web Development & Coding Specialization'
+    - name: 'Web Design for Everybody: Basics of Web Development'
       start: 2024
       # end:
       organization: Coursera
-      credentialid: SEIZIGVMOESS
+      credentialid:
       credentialurl: https://www.coursera.org/account/accomplishments/specialization/SEIZIGVMOESS
       credentialname: University of Michigan
       # details:
@@ -248,5 +249,8 @@ skills:
 
     - name: Microsoft Azure
       level: 68%
+
+    - name: Docker
+      level: 65%
 # footer: >
 #   Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
