@@ -1,9 +1,8 @@
 name: Generate CV PDF
 
 on:
-  push:
-    paths:
-      - '_data/data.yml'
+  deployment_status:
+    types: [success]
   workflow_dispatch:
 
 permissions:
@@ -11,6 +10,7 @@ permissions:
 
 jobs:
   build-pdf:
+    if: github.event.deployment_status.environment == 'github-pages'
     runs-on: ubuntu-latest
 
     steps:
