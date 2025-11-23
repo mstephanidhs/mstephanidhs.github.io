@@ -1,16 +1,18 @@
-name: Generate CV PDF
+name: Generate CV PDF After Pages Build
 
 on:
-  deployment_status:
-    types: [success]
+  workflow_run:
+    workflows: ['pages-build-deployment']
+    types:
+      - completed
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  build-pdf:
-    if: github.event.deployment_status.environment == 'github-pages'
+  generate-pdf:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
