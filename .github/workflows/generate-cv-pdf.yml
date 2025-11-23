@@ -36,7 +36,7 @@ jobs:
 
       - name: Generate PDF from /print page
         run: |
-          wkhtmltopdf -s A4 _site/print/index.html assets/cv.pdf
+          wkhtmltopdf -s A4 file://$PWD/_site/print/index.html assets/cv.pdf
 
       - name: Commit updated PDF
         run: |
