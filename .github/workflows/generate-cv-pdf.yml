@@ -13,12 +13,8 @@ permissions:
 jobs:
   generate-pdf:
     if: |
-      ${{
-        github.event.workflow_run.conclusion == 'success' &&
-        !(
-          github.event.workflow_run.head_commit.modified | join(' ') == 'assets/cv.pdf'
-        )
-      }}
+      github.event.workflow_run.conclusion == 'success' &&
+      !contains(github.event.workflow_run.head_commit.message, 'Update CV PDF (auto)')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
