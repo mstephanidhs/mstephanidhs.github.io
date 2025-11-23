@@ -15,7 +15,9 @@ jobs:
     if: |
       ${{
         github.event.workflow_run.conclusion == 'success' &&
-        github.event.workflow_run.head_commit.author.name != 'github-actions[bot]'
+        !(
+          github.event.workflow_run.head_commit.modified | join(' ') == 'assets/cv.pdf'
+        )
       }}
     runs-on: ubuntu-latest
     steps:
